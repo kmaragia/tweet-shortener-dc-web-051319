@@ -1,10 +1,10 @@
-def dictionary(tweet)
+def dictionary()
   words_to_be_substituted = {"hello" =>"hi","to"=>"2","two"=> "2","too"=> "2","for"=> "4", "four"=> "4","be"=> "b","you" => 'u',"at"=>"@","and"=> "&"}
 end
 def word_substituter (tweet)
  x = tweet.split(" ")
-  tweet_array.collect do |word|
-    replacements.each do |key, value|
+  x.collect do |word|
+    words_to_be_substituted().each do |key, value|
       word = value if word.downcase == key
     end
     word
