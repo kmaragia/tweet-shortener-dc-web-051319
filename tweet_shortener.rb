@@ -30,7 +30,7 @@ end
 
 
 def shortened_tweet_truncator(tweet)
-  t = tweet.scan(/./)
+  t = tweet.scan(//)
   if t.length <= 140
     return tweet
   end
