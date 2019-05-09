@@ -4,7 +4,7 @@ end
 def word_substituter (tweet)
  x = tweet.split(" ")
   x.collect do |word|
-    words_to_be_substituted().each do |key, value|
+    dictionary().each do |key, value|
       word = value if word.downcase == key
     end
     word
