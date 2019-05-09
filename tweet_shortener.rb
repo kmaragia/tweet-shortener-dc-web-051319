@@ -2,17 +2,15 @@ def dictionary(tweet)
   words_to_be_substituted = {"hello" =>"hi","to"=>"2","two"=> "2","too"=> "2","for"=> "4", "four"=> "4","be"=> "b","you" => 'u',"at"=>"@","and"=> "&"}
 end
 def word_substituter (tweet)
-  
-  tweet.sub!("hello","2")
-  tweet.sub!("to","2")
-  tweet.sub!("two","2")
-  tweet.sub!("too","2")
-  tweet.sub!("four","4")
-  tweet.sub!("for","4")
-  tweet.sub!("be","b")
-  tweet.sub!("you","u")
-  tweet.sub!("at","@")
-  tweet.sub!("and","&")
+ x = tweet.split(" ")
+  tweet_array.map do |word|
+    replacements.each do |key, value|
+      word = value if word.downcase == key
+    end
+    word
+  end.join(" ")
+end
+","&")
   return tweet
 end
       
