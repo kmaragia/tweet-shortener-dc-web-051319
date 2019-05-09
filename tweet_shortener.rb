@@ -10,9 +10,6 @@ def word_substituter (tweet)
     word
   end.join(" ")
 end
-","&")
-  return tweet
-end
       
 def bulk_tweet_shortener(arr)
   arr.collect do |tweet|
